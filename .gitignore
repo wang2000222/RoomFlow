@@ -1,0 +1,8 @@
+.local/
+target/
+logs/
+*.log
+.env
+.env.*
+.idea/
+miniprogram/project.private.config.json
