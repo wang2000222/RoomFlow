@@ -1,1 +1,7 @@
-{"description":"RoomFlow 用户与管理员演示小程序","compileType":"miniprogram","appid":"touristappid","projectname":"RoomFlow","setting":{"urlCheck":false,"es6":true,"enhance":true}}
+{
+  "description": "RoomFlow 用户与管理员演示小程序",
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "RoomFlow",
+  "setting": { "urlCheck": false, "es6": true, "enhance": true }
+}

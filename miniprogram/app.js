@@ -1,1 +1,3 @@
-App({globalData:{baseUrl:'http://127.0.0.1:8091',token:'',actor:null}})
+App({
+  globalData: { baseUrl: "http://127.0.0.1:8091", token: "", actor: null },
+});

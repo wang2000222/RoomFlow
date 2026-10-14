@@ -4,5 +4,6 @@ logs/
 *.log
 .env
 .env.*
+!.env.example
 .idea/
 miniprogram/project.private.config.json

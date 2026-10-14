@@ -1,1 +1,10 @@
-{"pages":["pages/index/index"],"window":{"navigationBarTitleText":"青禾 · 自助棋牌空间","navigationBarBackgroundColor":"#193c32","navigationBarTextStyle":"white","backgroundColor":"#f5f5ef"},"style":"v2"}
+{
+  "pages": ["pages/index/index", "pages/operations/index"],
+  "window": {
+    "navigationBarTitleText": "青禾 · 自助棋牌空间",
+    "navigationBarBackgroundColor": "#193c32",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f5ef"
+  },
+  "style": "v2"
+}

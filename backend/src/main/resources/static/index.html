@@ -1,9 +1,105 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>青禾 · 自助棋牌空间</title><link rel="stylesheet" href="/style.css"></head>
-<body><aside><a class="brand" href="/">青禾<span>ROOMFLOW</span></a><p class="caption">空间运营工作台</p><nav><button data-tab="rooms" class="active">▦ 包间与预约</button><button data-tab="orders">▤ 预约订单</button><button data-tab="audit">◷ 操作记录</button></nav><div class="aside-foot">自助棋牌空间<br>单商家 · 多门店</div></aside>
-<main><header><div><span class="eyebrow">OPERATIONS / WORKSPACE</span><h1>让每一间房，都井然有序。</h1></div><div class="account"><span id="identity">未登录</span><button id="logout">切换账号</button></div></header>
-<div class="notice">演示环境 · 支付、退款、门锁与通电均为模拟操作，不产生真实交易或设备指令。</div>
-<section id="login"><div class="login-card"><span class="eyebrow">WELCOME TO ROOMFLOW</span><h2>选择一个身份，开始体验</h2><p>用户预约与门店运营，共用一套清晰的业务流程。</p><div class="login-actions"><button data-account="guest">用户体验</button><button data-account="owner">商家负责人</button><button data-account="manager">城南店管理员</button></div></div></section>
-<div id="workspace" hidden><section class="metrics" id="metrics"></section><div class="toolbar"><div><h2 id="section-title">包间与预约</h2><p>实时查看门店包间，安排下一场相聚。</p></div><div><select id="store"><option value="">全部门店</option></select><button id="refresh">刷新</button></div></div><section id="rooms" class="room-grid"></section><section id="orders" hidden></section><section id="audit" hidden></section></div>
-<footer>青禾 · 自助棋牌空间 / Java 后端与多端应用作品</footer></main>
-<dialog id="booking-dialog"><form id="booking-form"><div class="modal-title"><h2>预约包间</h2><button type="button" id="close-dialog">×</button></div><p id="booking-room"></p><label>开始时间<input id="start" type="datetime-local" required></label><label>使用时长<select id="duration"><option value="1">1 小时</option><option value="2" selected>2 小时</option><option value="3">3 小时</option><option value="4">4 小时</option></select></label><p id="price-preview"></p><button class="primary" id="submit-booking">提交预约</button><p class="small">待付款订单保留 15 分钟；提交后可在订单页进行演示支付。</p></form></dialog><div id="toast" role="status"></div><script src="/app.js"></script></body></html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>青禾 · 自助棋牌空间</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <aside>
+      <a class="brand" href="/">青禾<span>ROOMFLOW</span></a>
+      <p class="caption">空间运营工作台</p>
+      <nav>
+        <button data-tab="rooms" class="active">▦ 包间与预约</button
+        ><button data-tab="orders">▤ 预约订单</button
+        ><button data-tab="audit">◷ 操作记录</button
+        ><button data-tab="config">⚙ 经营配置</button
+        ><button data-tab="staff">♙ 员工与权限</button
+        ><button data-tab="finance">▤ 账务与设备</button
+        ><button data-tab="notifications">◷ 提醒消息</button>
+      </nav>
+      <div class="aside-foot">自助棋牌空间<br />单商家 · 多门店</div>
+    </aside>
+    <main>
+      <header>
+        <div>
+          <span class="eyebrow">OPERATIONS / WORKSPACE</span>
+          <h1>让每一间房，都井然有序。</h1>
+        </div>
+        <div class="account">
+          <span id="identity">未登录</span><button id="logout">切换账号</button>
+        </div>
+      </header>
+      <div class="notice">
+        演示环境 ·
+        支付、退款、门锁与通电均为模拟操作，不产生真实交易或设备指令。
+      </div>
+      <section id="login">
+        <div class="login-card">
+          <span class="eyebrow">WELCOME TO ROOMFLOW</span>
+          <h2>选择一个身份，开始体验</h2>
+          <p>用户预约与门店运营，共用一套清晰的业务流程。</p>
+          <div class="login-actions">
+            <button data-account="guest">用户体验</button
+            ><button data-account="owner">商家负责人</button
+            ><button data-account="manager">城南店管理员</button>
+          </div>
+        </div>
+      </section>
+      <div id="workspace" hidden>
+        <section class="metrics" id="metrics"></section>
+        <div class="toolbar">
+          <div>
+            <h2 id="section-title">包间与预约</h2>
+            <p>实时查看门店包间，安排下一场相聚。</p>
+          </div>
+          <div>
+            <select id="store">
+              <option value="">全部门店</option></select
+            ><button id="refresh">刷新</button>
+          </div>
+        </div>
+        <section id="rooms" class="room-grid"></section>
+        <section id="orders" hidden></section>
+        <section id="audit" hidden></section>
+        <section id="config" hidden></section>
+        <section id="staff" hidden></section>
+        <section id="finance" hidden></section>
+        <section id="notifications" hidden></section>
+      </div>
+      <footer>青禾 · 自助棋牌空间 / Java 后端与多端应用作品</footer>
+    </main>
+    <dialog id="booking-dialog">
+      <form id="booking-form">
+        <div class="modal-title">
+          <h2>预约包间</h2>
+          <button type="button" id="close-dialog">×</button>
+        </div>
+        <p id="booking-room"></p>
+        <label
+          >开始时间<input id="start" type="datetime-local" required /></label
+        ><label
+          >使用时长<select id="duration">
+            <option value="1">1 小时</option>
+            <option value="2" selected>2 小时</option>
+            <option value="3">3 小时</option>
+            <option value="4">4 小时</option>
+          </select></label
+        ><label
+          >计价方式<select id="booking-package">
+            <option value="">按小时计价</option>
+          </select></label
+        >
+        <p id="price-preview"></p>
+        <button class="primary" id="submit-booking">提交预约</button>
+        <p class="small">
+          待付款订单保留 15 分钟；提交后可在订单页进行演示支付。
+        </p>
+      </form>
+    </dialog>
+    <div id="toast" role="status"></div>
+    <script src="/app.js"></script>
+    <script src="/operations.js"></script>
+  </body>
+</html>

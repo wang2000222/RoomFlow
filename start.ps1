@@ -1,7 +1,7 @@
 param([switch]$Background)
 $ErrorActionPreference='Stop'
 $backendDirectory=Join-Path $PSScriptRoot 'backend'
-$jarFile=Join-Path $backendDirectory 'target/roomflow-0.1.0.jar'
+$jarFile=Join-Path $backendDirectory 'target/roomflow-0.2.0.jar'
 if(!(Test-Path -LiteralPath $jarFile)){throw '请先在 backend 目录运行 mvn clean package。'}
 New-Item -ItemType Directory -Force (Join-Path $backendDirectory '.local') | Out-Null
 if($Background){

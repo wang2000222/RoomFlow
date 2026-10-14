@@ -1,0 +1,11 @@
+services:
+  roomflow:
+    build: .
+    ports:
+      - "127.0.0.1:8091:8091"
+    environment:
+      ROOMFLOW_DEMO: "true"
+    volumes:
+      - roomflow-data:/app/.local
+volumes:
+  roomflow-data:
